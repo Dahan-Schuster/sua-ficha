@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  suaficha_db:
+    image: mysql:5.6
+    container_name: suaficha_db
+    restart: always
+    ports:
+      - 127.0.0.1:3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: suaficha_db
+    volumes:
+      - mysql:/var/lib/mysql
+    network_mode: host
+
+  suaficha_backend:
+    build: .
+    container_name: suaficha_backend
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/usr/app
+    network_mode: host
+
+volumes:
+  mysql: {}

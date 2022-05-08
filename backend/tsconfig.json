@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "es2018",
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"lib": [
+			"dom",
+			"es2018.promise",
+			"es2018",
+			"esnext.asynciterable",
+		],
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"strictPropertyInitialization": false
+	}
+}
